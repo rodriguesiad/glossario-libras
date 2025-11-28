@@ -1,5 +1,5 @@
 import { CommonModule, NgFor, NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -8,9 +8,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { VideoCardComponent } from "./components/video-card/video-card.component";
 import { Sinal } from './interfaces/SinalInfo';
-import { SinalService } from './services/sinal.service';
 import { CATEGORIAS } from './interfaces/categorias';
+
 import { FormsModule } from '@angular/forms';
+import { SINAIS } from './interfaces/sinais';
 
 
 @Component({
@@ -19,11 +20,11 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'glossario-libras';
 
-  sinais: Sinal[] = [];
-  filtrados: Sinal[] = [];
+  sinais: Sinal[] = SINAIS;
+  filtrados: Sinal[] = SINAIS;
 
   paginaAtual = 1;
   itensPorPagina = 9;
@@ -33,16 +34,6 @@ export class AppComponent implements OnInit {
 
   pesquisa = '';
   letraAtiva: string | null = null;
-
-
-  constructor(private sinalService: SinalService) { }
-
-  ngOnInit(): void {
-    this.sinalService.getSinais().subscribe(data => {
-      this.sinais = data;
-      this.filtrados = data;
-    });
-  }
 
   filtrar(): void {
     let resultado = [...this.sinais];
