@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [MatToolbarModule, MatIconModule, MatButtonModule, VideoCardComponent, NgFor, MatFormFieldModule, MatInputModule, MatChipsModule, FormsModule],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, VideoCardComponent, NgFor, MatFormFieldModule, MatInputModule, MatChipsModule, FormsModule, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
 
   pesquisa = '';
   letraAtiva: string | null = null;
+
 
   constructor(private sinalService: SinalService) { }
 

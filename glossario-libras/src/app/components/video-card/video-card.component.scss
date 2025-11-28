@@ -53,7 +53,7 @@ h2 {
     }
 }
 
-.modal-content{
+.modal-content {
     border-radius: 15px !important;
 }
 
@@ -98,7 +98,8 @@ h2 {
 
 .aluno-card {
     min-height: 60px;
-    background-color: #f2f0f7;
+    background: #b3d3f2;
+    background: linear-gradient(318deg, rgba(179, 211, 242, 1) 0%, rgba(0, 60, 132, 1) 100%);
     border-radius: 50px;
 }
 
@@ -106,4 +107,5 @@ h2 {
     font-size: 14px;
     font-weight: 600;
     text-align: left !important;
+    color:white;
 }
