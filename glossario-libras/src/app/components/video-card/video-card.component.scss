@@ -1,0 +1,109 @@
+.video-card {
+    height: 350px;
+    width: 400px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(#000, .15);
+    background-color: white;
+}
+
+.top {
+    height: 60%;
+    background-color: #3f454b;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.bottom {
+    height: 40%;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #f2f0f7;
+    border-radius: 15px;
+}
+
+.descricao {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 500;
+    color: #627383
+}
+
+.video-card:hover {
+    box-shadow: 0 1rem 3rem rgba(#000, .175);
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1100px;
+    }
+}
+
+.modal-content{
+    border-radius: 15px !important;
+}
+
+.modalb-top {
+    height: 60%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.modal-descricao {
+    color: #627383;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.imagem {
+    width: 40px;
+    height: 40px;
+    border-radius: 999999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    box-shadow: 1px 1px 1px #cdcdcd
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 999999px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.aluno-card {
+    min-height: 60px;
+    background-color: #f2f0f7;
+    border-radius: 50px;
+}
+
+.aluno-nome {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left !important;
+}

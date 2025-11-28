@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-light pb-3" style="background-color: #F4F5F8;">
+    <div class="container-fluid container">
+        <a class="navbar-brand" href="#">Glossário</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="w-100 pb-5" style="background-color: #F4F5F8;">
+    <div class="container" style="background-color: #003C84; width: 100%; min-height: 500px; border-radius: 15px;">
+    </div>
+</div>
+
+<div class="container videos my-5" style="width: 100%; min-height: 500px; border-radius: 15px; ">
+
+    <div class="w-100 d-flex justify-content-between">
+        <div>
+            <h1 style="font-size: 32px; font-weight: 500; color: #1e1e1e;">Glossário de Sinais</h1>
+            <p class="mt-2" style="font-size: 14px; font-weight: 500;">
+                Foram encontrados {{ sinais.length }} sinais
+            </p>
+        </div>
+
+        <div class="d-flex gap-2">
+            <mat-chip *ngFor="let cat of categorias" (click)="selecionarCategoria(cat.nome)"
+                [attr.selected]="categoriaAtiva === cat.nome ? '' : null" class="px-3 py-2">
+                <mat-icon matChipAvatar>category</mat-icon>
+                {{ cat.nome }}
+            </mat-chip>
+        </div>
+
+    </div>
+
+    <div class="mb-3 mt-5 d-flex justify-content-between align-items-center form-floating">
+        <input type="text" class="form-control" id="pesquisar"
+            placeholder="Pesquise um termo do curso de Sistemas de Informação" [(ngModel)]="pesquisa"
+            (input)="filtrar()">
+        <label for="pesquisar">Pesquise um termo do curso de Sistemas de Informação</label>
+
+        <div class="d-flex justify-content-center align-items-center pesquisar-btn">
+            <button type="button" class="btn-search m-0 p-0" aria-label="Pesquisar">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <ul class="nav justify-content-center mt-3">
+        <li class="nav-item" *ngFor="let letra of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')">
+            <a class="nav-link" [class.active]="letraAtiva === letra" (click)="selecionarLetra(letra)"
+                style="cursor: pointer;">
+                {{ letra }}
+            </a>
+        </li>
+    </ul>
+
+    <div class="container w-100 justify-content-start px-0 d-flex flex-wrap gap-5  mt-5">
+        <app-video-card *ngFor="let item of sinaisPaginados" [sinal]="item">
+        </app-video-card>
+    </div>
+
+    <div class="w-100 d-flex justify-content-center align-items-center" *ngIf="filtrados && filtrados.length <= 0">
+        <p style="font-style: italic; color: black;">Nenhum sinal encontrado</p>
+    </div>
+
+    <nav class="nav-pagination mt-5" *ngIf="filtrados && filtrados.length > 0">
+        <ul class="pagination justify-content-center align-items-center">
+            <li class="page-item" [class.disabled]="paginaAtual === 1">
+                <a class="page-link" (click)="mudarPagina(paginaAtual - 1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                        class="arrow">
+                        <path d="M560-253.85 333.85-480 560-706.15 602.15-664l-184 184 184 184L560-253.85Z" />
+                    </svg>
+                </a>
+            </li>
+
+            <li class="page-item" *ngFor="let pagina of [].constructor(totalPaginas); let i = index"
+                [class.active]="(i + 1) === paginaAtual">
+                <a class="page-link" (click)="mudarPagina(i + 1)">{{ i + 1 }}</a>
+            </li>
+
+            <li class="page-item" [class.disabled]="paginaAtual === totalPaginas">
+                <a class="page-link" (click)="mudarPagina(paginaAtual + 1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                        class="arrow">
+                        <path d="m517.85-480-184-184L376-706.15 602.15-480 376-253.85 333.85-296l184-184Z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div class="w-100 pb-5" style="background-color: #003C84;">
+</div>
