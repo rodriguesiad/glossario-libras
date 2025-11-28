@@ -35,5 +35,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: glossario-libras/dist/glossario-libras
+        folder: glossario-libras/dist/glossario-libras/browser
+
 
