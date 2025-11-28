@@ -53,7 +53,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "none"
+              "outputHashing": "none",
+              "baseHref": "/glossario-libras/"
             },
             "development": {
               "optimization": false,
