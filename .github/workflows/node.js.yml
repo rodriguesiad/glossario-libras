@@ -22,16 +22,18 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: glossario-libras
 
     - name: Build Angular
       run: npm run build
+      working-directory: glossario-libras
 
     - name: Disable Jekyll
-      run: echo "" > dist/glossario-libras/.nojekyll
+      run: echo "" > glossario-libras/dist/glossario-libras/.nojekyll
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: dist/glossario-libras
+        folder: glossario-libras/dist/glossario-libras
 
