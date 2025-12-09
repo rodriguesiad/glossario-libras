@@ -108,6 +108,11 @@ input {
 /* CHIP SELECIONADO */
 .chip-ativo {
     color: white !important;
+    background-color: #b8d3ff !important;
     font-weight: 600;
     box-shadow: 0 .5rem 1rem rgba(#000, .15);
+}
+
+.letra-ativa {
+    font-weight: 600;
 }

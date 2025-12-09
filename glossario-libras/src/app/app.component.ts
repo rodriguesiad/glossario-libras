@@ -1,5 +1,5 @@
 import { CommonModule, NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,24 +7,25 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { VideoCardComponent } from "./components/video-card/video-card.component";
-import { Sinal } from './interfaces/SinalInfo';
 import { CATEGORIAS } from './interfaces/categorias';
 
 import { FormsModule } from '@angular/forms';
-import { SINAIS } from './interfaces/sinais';
+import { SINAIS, Sinal } from './interfaces/sinais';
+import { ModalComponent } from "./components/modal/modal.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, VideoCardComponent, NgFor, MatFormFieldModule, MatInputModule, MatChipsModule, FormsModule, NgIf],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, VideoCardComponent, NgFor, MatFormFieldModule, MatInputModule, MatChipsModule, FormsModule, NgIf, ModalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'glossario-libras';
 
   sinais: Sinal[] = SINAIS;
   filtrados: Sinal[] = SINAIS;
+  sinalSelecionado: Sinal | null = null;
 
   paginaAtual = 1;
   itensPorPagina = 9;
@@ -34,6 +35,10 @@ export class AppComponent {
 
   pesquisa = '';
   letraAtiva: string | null = null;
+
+  ngOnInit(): void {
+    this.filtrados = this.filtrados.sort((a, b) => a.nome.localeCompare(b.nome));
+  }
 
   filtrar(): void {
     let resultado = [...this.sinais];
@@ -56,6 +61,7 @@ export class AppComponent {
       );
     }
 
+    resultado.sort((a, b) => a.nome.localeCompare(b.nome));
     this.filtrados = resultado;
     this.paginaAtual = 1;
   }
@@ -83,6 +89,10 @@ export class AppComponent {
   get sinaisPaginados(): Sinal[] {
     const start = (this.paginaAtual - 1) * this.itensPorPagina;
     return this.filtrados.slice(start, start + this.itensPorPagina);
+  }
+
+  abrirModal(sinal: Sinal) {
+    this.sinalSelecionado = sinal;
   }
 
 }
