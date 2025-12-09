@@ -28,7 +28,7 @@
 </div>
 
 <div class="container videos my-5" id="videos">
-    <div class="w-100 d-flex justify-content-between">
+    <div class="w-100 d-flex justify-content-between title-card">
         <div>
             <h1 style="font-size: 32px; font-weight: 500; color: #1e1e1e;">Glossário de Sinais</h1>
             <p class="mt-2" style="font-size: 14px; font-weight: 500;">
@@ -36,7 +36,7 @@
             </p>
         </div>
 
-        <div class="d-flex gap-2">
+        <div class="d-flex gap-2 flex-wrap categorias-card">
             <mat-chip *ngFor="let cat of categorias" (click)="selecionarCategoria(cat.nome)"
                 [ngClass]="{ 'chip-ativo': categoriaAtiva === cat.nome }" class="px-3 py-2">
                 <mat-icon matChipAvatar>category</mat-icon>
@@ -51,7 +51,7 @@
         <input type="text" class="form-control" id="pesquisar"
             placeholder="Pesquise um termo do curso de Sistemas de Informação" [(ngModel)]="pesquisa"
             (input)="filtrar()">
-        <label for="pesquisar">Pesquise um termo do curso de Sistemas de Informação</label>
+        <label for="pesquisar">Pesquise um termo</label>
 
         <div class="d-flex justify-content-center align-items-center pesquisar-btn">
             <button type="button" class="btn-search m-0 p-0" aria-label="Pesquisar">

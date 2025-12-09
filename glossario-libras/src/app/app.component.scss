@@ -69,7 +69,7 @@ input {
     display: block;
     background-color: transparent;
     border: none;
-    
+
 }
 
 .principal {
@@ -115,4 +115,18 @@ input {
 
 .letra-ativa {
     font-weight: 600;
+}
+
+.catergorias-card {
+    justify-content: end;
+}
+
+@media (max-width: 900px) {
+    .title-card {
+        flex-direction: column;
+    }
+
+    .catergorias-card {
+        justify-content: start;
+    }
 }
