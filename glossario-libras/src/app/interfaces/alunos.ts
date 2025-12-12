@@ -27,3 +27,27 @@ export const IAD: Aluno =  {
     turma: "Libras - 2025",
     foto: "assets/images/alunos/iad.jpeg"
 };
+
+export const HITALO: Aluno =  {
+    nome: "Hítalo Aguiar",
+    turma: "Libras - 2025",
+    foto: "assets/images/default-user.jpg"
+};
+
+export const DAVID: Aluno =  {
+    nome: "David Daniel Pereira",
+    turma: "Libras - 2025",
+    foto: "assets/images/default-user.jpg"
+};
+
+export const ERICK: Aluno =  {
+    nome: "Erick Santos",
+    turma: "Libras - 2025",
+    foto: "assets/images/default-user.jpg"
+};
+
+export const MAYSA: Aluno =  {
+    nome: "Maysa Sofia",
+    turma: "Libras - 2025",
+    foto: "assets/images/default-user.jpg"
+};

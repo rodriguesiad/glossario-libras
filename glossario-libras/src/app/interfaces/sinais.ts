@@ -1,4 +1,4 @@
-import { Aluno, DANILO, EMANNUEL, IAD, LUIS } from "./alunos"
+import { Aluno, DANILO, DAVID, EMANNUEL, ERICK, HITALO, IAD, LUIS, MAYSA } from "./alunos"
 
 export interface Sinal {
     nome: string,
@@ -155,5 +155,137 @@ export const SINAIS: Sinal[] = [
         aluno: IAD,
         disciplina: "Banco de Dados"
     },
+    {
+        nome: "Algoritmo",
+        descricao: "Conjunto de regras ou instruções que define como a IA aprende, processa dados e toma decisões.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/uerR6s7ESnY?si=FQ0tLgDGkAG70AVG",
+        aluno: ERICK,
+        disciplina: "Inteligência Artificial"
+    },
+    {
+        nome: "Processamento",
+        descricao: "Conjunto de operações matemáticas usadas pela IA para analisar dados e aprender padrões.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/3O3Z1KuiYJ8?si=uistSnTvPJ1coR2X",
+        aluno: ERICK,
+        disciplina: "Inteligência Artificial"
+    },
+    {
+        nome: "Treinar",
+        descricao: "Etapa em que o modelo ajusta seus parâmetros a partir de dados para aprender a realizar uma tarefa.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/sfDtWP8LtfM?si=M-1KyYCb4t5SWebM",
+        aluno: ERICK,
+        disciplina: "Inteligência Artificial"
+    },
+    {
+        nome: "Placa de Video",
+        descricao: "Hardware especializado que executa milhares de cálculos em paralelo, acelerando o treinamento de modelos de IA.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/QTJl1UFurY0?si=Qzi_FQWCKCJFW2EK",
+        aluno: ERICK,
+        disciplina: "Inteligência Artificial"
+    },
+    {
+        nome: "Decisão",
+        descricao: "Resultado gerado pela IA após analisar informações e selecionar a melhor ação ou resposta possível.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/M2sajewZ6eo?si=n3veZY_bUINfe6zN",
+        aluno: ERICK,
+        disciplina: "Inteligência Artificial"
+    },
+    {
+        nome: "Hacker",
+        descricao: "Pessoa com profundo domínio de sistemas computacionais, capaz de explorar, modificar ou criar soluções tecnológicas de maneiras não convencionais.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/ZyHk0NRwHuQ?si=MKE6NTuOW33JbyvS",
+        aluno: HITALO,
+        disciplina: "Segurança e Auditoria de Sistemas"
+    },
+    {
+        nome: "VPN",
+        descricao: "Tecnologia que cria uma conexão segura e criptografada entre o usuário e a rede, protegendo dados e ocultando a localização durante a navegação.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/w_Zkr6SDckI?si=1UyNYKIqm1LLaN2m",
+        aluno: HITALO,
+        disciplina: "Segurança e Auditoria de Sistemas"
+    },
+    {
+        nome: "Firewall",
+        descricao: "Sistema que controla e filtra o tráfego de rede para permitir comunicações seguras e bloquear acessos indesejados.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/L-HPyQ5A5nA?si=koJyCDMvSPyNtgan",
+        aluno: HITALO,
+        disciplina: "Segurança e Auditoria de Sistemas"
+    },
+    {
+        nome: "Auditoria",
+        descricao: "Processo de avaliar sistemas, controles e práticas de segurança para verificar conformidade, identificar falhas e garantir a integridade das operações de TI.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/cfkivuJEUvI?si=JUIlQLdzDf-dVaF2",
+        aluno: HITALO,
+        disciplina: "Segurança e Auditoria de Sistemas"
+    },
+    {
+        nome: "Malware",
+        descricao: "Software malicioso criado para invadir, danificar, explorar ou comprometer sistemas e dados.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/hJHYfuopq24?si=pUPGVkiPt0_HT9Ij",
+        aluno: HITALO,
+        disciplina: "Segurança e Auditoria de Sistemas"
+    },
+    {
+        nome: "Quantidade de Semestres",
+        descricao: "Conceito que classifica a quantidade de semestres do curso de Sistemas de Informação.",
+        categoria: "Conceitos",
+        link: "https://www.youtube.com/embed/n0z_UAUzaw0?si=gaRQnLeVgmbuH7Pf",
+        aluno: DAVID,
+    },
+    {
+        nome: "Quantidade de Matérias",
+        descricao: "Conceito que classifica a quantidade de matérias do curso de Sistemas de Informação.",
+        categoria: "Conceitos",
+        link: "https://www.youtube.com/embed/kw7db4yAAhA?si=mNbdbWFw-1rxqu-6",
+        aluno: DAVID,
+    },
+    {
+        nome: "Duração do Curso",
+        descricao: "Conceito que classifica a duração do curso de Sistemas de Informação.",
+        categoria: "Conceitos",
+        link: "https://www.youtube.com/embed/QM5iimto7g0?si=I69VpBqWPwyPnp0m",
+        aluno: DAVID,
+    },
+    {
+        nome: "CRUD",
+        descricao: "Acrônimo para Create, Read, Update e Delete, que representa as quatro operações fundamentais de manipulação de dados em sistemas de informação.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/ZdXHlFNMzP8?si=fkSOUTP5lWvnNt8C",
+        aluno: MAYSA,
+        disciplina: "Algoritmos e Programação"
+    },
+    {
+        nome: "Variável",
+        descricao: "Elemento utilizado para armazenar informações na memória do computador, podendo assumir diferentes valores durante a execução de um programa.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/tJ0T7iGGoZk?si=We0gOXnqNXDq_XWa",
+        aluno: MAYSA,
+        disciplina: "Algoritmos e Programação"
+    },
+    {
+        nome: "Java",
+        descricao: "Linguagem de programação orientada a objetos amplamente utilizada no desenvolvimento de aplicações web, mobile, desktop e sistemas corporativos.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/JnkzMjYMPag?si=QjjQXLvW7g4pcDWa",
+        aluno: MAYSA,
+        disciplina: "Algoritmos e Programação"
+    },
+    {
+        nome: "Código-fonte",
+        descricao: "Conjunto de instruções escritas por um programador em uma linguagem de programação. É a forma legível pelo ser humano que descreve o funcionamento de um software antes de ser convertido em código executável pelo computador.",
+        categoria: "Disciplinas",
+        link: "https://www.youtube.com/embed/jXYO7IiQkjk?si=_d5btoZnITilYHk7",
+        aluno: MAYSA,
+        disciplina: "Algoritmos e Programação"
+    }
 ]
-
