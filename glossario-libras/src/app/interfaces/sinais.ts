@@ -236,27 +236,6 @@ export const SINAIS: Sinal[] = [
         disciplina: "Segurança e Auditoria de Sistemas"
     },
     {
-        nome: "Quantidade de Semestres",
-        descricao: "Conceito que classifica a quantidade de semestres do curso de Sistemas de Informação.",
-        categoria: "Conceitos",
-        link: "https://www.youtube.com/embed/n0z_UAUzaw0?si=gaRQnLeVgmbuH7Pf",
-        aluno: DAVID,
-    },
-    {
-        nome: "Quantidade de Matérias",
-        descricao: "Conceito que classifica a quantidade de matérias do curso de Sistemas de Informação.",
-        categoria: "Conceitos",
-        link: "https://www.youtube.com/embed/kw7db4yAAhA?si=mNbdbWFw-1rxqu-6",
-        aluno: DAVID,
-    },
-    {
-        nome: "Duração do Curso",
-        descricao: "Conceito que classifica a duração do curso de Sistemas de Informação.",
-        categoria: "Conceitos",
-        link: "https://www.youtube.com/embed/QM5iimto7g0?si=I69VpBqWPwyPnp0m",
-        aluno: DAVID,
-    },
-    {
         nome: "CRUD",
         descricao: "Acrônimo para Create, Read, Update e Delete, que representa as quatro operações fundamentais de manipulação de dados em sistemas de informação.",
         categoria: "Disciplinas",
