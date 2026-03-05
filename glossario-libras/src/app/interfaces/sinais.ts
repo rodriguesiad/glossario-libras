@@ -267,7 +267,7 @@ export const SINAIS: Sinal[] = [
         aluno: MAYSA,
         disciplina: "Algoritmos e Programação"
     },
-        {
+    {
         nome: "Quantidade de Semestres",
         descricao: "Conceito que classifica a quantidade de semestres do curso de Sistemas de Informação.",
         categoria: "Conceitos",
