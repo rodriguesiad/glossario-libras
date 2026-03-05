@@ -266,5 +266,26 @@ export const SINAIS: Sinal[] = [
         link: "https://www.youtube.com/embed/jXYO7IiQkjk?si=_d5btoZnITilYHk7",
         aluno: MAYSA,
         disciplina: "Algoritmos e Programação"
+    },
+        {
+        nome: "Quantidade de Semestres",
+        descricao: "Conceito que classifica a quantidade de semestres do curso de Sistemas de Informação.",
+        categoria: "Conceitos",
+        link: "https://www.youtube.com/embed/aH3VOpxIWFs?si=N47DbVcByRKU_phU",
+        aluno: DAVID,
+    },
+    {
+        nome: "Quantidade de Matérias",
+        descricao: "Conceito que classifica a quantidade de matérias do curso de Sistemas de Informação.",
+        categoria: "Conceitos",
+        link: "https://www.youtube.com/embed/7yVLQIUgTeg?si=3OtFbRso8BxbEB6C",
+        aluno: DAVID,
+    },
+    {
+        nome: "Duração do Curso",
+        descricao: "Conceito que classifica a duração do curso de Sistemas de Informação.",
+        categoria: "Conceitos",
+        link: "https://www.youtube.com/embed/LhTTJUqjNy4?si=qF41Cxn5lziZ51xB",
+        aluno: DAVID,
     }
 ]
